@@ -3,9 +3,10 @@ const express = require("express");
 const app = express();
 
 app.use(express.json());
+const ts = "";
 
 app.get("/", (req, res) => {
-  res.send("hello wolrd!!");
+  res.send(ts);
 });
 
 const courses = [
@@ -13,6 +14,7 @@ const courses = [
   { id: 2, name: "course2" },
   { id: 3, name: "course3" }
 ];
+
 app.get("/api/courses", (req, res) => {
   res.send(courses);
 });
