@@ -5,6 +5,7 @@ const Contact = mongoose.model("Contact", constactSchema);
 
 export const addNewContact = (req, res) => {
   let newContact = new Contact(req.body);
+  console.log(req.body);
 
   newContact.save((err, contact) => {
     if (err) {

@@ -8,7 +8,10 @@ const app = express();
 const PORT = 3000;
 
 mongoose.Promise = global.Promise;
-mongoose.connect("mongodb://localhost:27017/CRMdb", {
+// const url = "mongodb://localhost/CRMdb";
+const url =
+  "mongodb+srv://abdulrazak:diiriye1992@zeon-m0w0g.mongodb.net/CRMdb?retryWrites=true&w=majority";
+mongoose.connect(url, {
   keepAlive: 1,
   useNewUrlParser: true
 });

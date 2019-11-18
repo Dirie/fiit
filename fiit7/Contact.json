@@ -1,0 +1,10 @@
+{
+  "_id": { "$oid": "5d34374bf50fe233b83be84c" },
+  "firstName": "Abdulrazak",
+  "lastName": "Dirie",
+  "email": "user1@domain.com",
+  "company": "Zion",
+  "phone": { "$numberLong": "7676767612" },
+  "created_date": { "$date": { "$numberLong": "1563703115198" } },
+  "__v": { "$numberInt": "0" }
+}

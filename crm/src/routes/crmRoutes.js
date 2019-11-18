@@ -5,6 +5,7 @@ import {
   UpdateContacts,
   DeleteContacts
 } from "./../controllers/crmController";
+
 const routes = app => {
   app
     .route("/contact")
@@ -15,7 +16,11 @@ const routes = app => {
     }, getContacts)
 
     // post endpoint
-    .post(addNewContact);
+    .post((req, res, next) => {
+      console.log(`requested from ${req.originalUrl}`);
+      console.log(`method used ${req.method}`);
+      next();
+    }, addNewContact);
 
   app
     .route("/contact/:contactId")

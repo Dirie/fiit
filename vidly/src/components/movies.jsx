@@ -38,7 +38,6 @@ class Movies extends Component {
     } catch (ex) {
       if (ex.response && ex.response.status === 404)
         toast.error("This moive had already been deleted!");
-
       this.setState({ movies: originalMovie });
     }
   };
@@ -98,11 +97,10 @@ class Movies extends Component {
 
   render() {
     const { pageSize, currentPage, sortColumn, searchQuery } = this.state;
-    const { length: count } = this.state.movies;
+    // const { length: count } = this.state.movies;
 
     const { totlaCount, data: movies } = this.getPagedData();
 
-    if (count === 0) return <p>There is not data to display in the table!</p>;
     const { user } = this.props;
     return (
       <div className="row">
